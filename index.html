@@ -14,8 +14,8 @@
     <meta name="google-site-verification" content="R6gew60n-p6zuITA9xfrGHIHJDrO8-D67CFFHKVVDqg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leandro Alves | Nutricionista em Porto Alegre</title>
-    <meta name="description" content="Nutricionista Leandro Alves - Emagrecimento, Hipertrofia e Nutrição Clínica em Porto Alegre. Certificação ISAK e Experiência HCPA.">
-    <meta name="keywords" content="nutricionista porto alegre, emagrecimento, hipertrofia, nutricionista esportivo, avaliação ISAK, dieta low carb, saúde intestinal, diabetes, emagrecer porto alegre, nutricionista clínico, geriatria, geriátrico, nutricionista idosos, ganho massa muscular">
+    <meta name="description" content="Nutrição Clínica e Esportiva em Porto Alegre. Especialista em Geriatria, Nutrição Hospitalar e Avaliação Física ISAK. Atendimento ético e personalizado.">
+    <meta name="keywords" content="nutricionista porto alegre, nutricionista clínico, geriatria, nutrição esportiva, avaliação ISAK, nutrição hospitalar, emagrecimento saudável, nutrição funcional, saúde intestinal, longevidade">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,6 +74,19 @@
             100% { transform: translate(0px, 0px) scale(1); }
         }
         .animate-blob { animation: blob 7s infinite; }
+        
+        /* Estilo para a imagem de orientação de vestimenta */
+        .dress-code-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(5, 150, 105, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .dress-code-image:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="text-gray-700 bg-slate-50 w-full antialiased overflow-x-hidden">
@@ -81,12 +94,12 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-sm fixed w-full z-50 top-0 left-0">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="font-bold text-xl tracking-tight text-emerald-700 truncate max-w-[70%] md:max-w-none uppercase">LEANDRO ALVES</a>
+            <a href="#" class="font-bold text-xl tracking-tight text-emerald-700 truncate max-w-[70%] md:max-w-none">LEANDRO ALVES</a>
             
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#sobre" class="text-gray-600 hover:text-emerald-600 transition font-medium">Sobre</a>
-                <a href="#metodo" class="text-gray-600 hover:text-emerald-600 transition font-medium">Como Funciona</a>
-                <a href="#investimento" class="text-gray-600 hover:text-emerald-600 transition font-medium">Planos</a>
+                <a href="#metodo" class="text-gray-600 hover:text-emerald-600 transition font-medium">Método</a>
+                <a href="#atendimento" class="text-gray-600 hover:text-emerald-600 transition font-medium">Atendimento</a>
                 <a href="#localizacao" class="text-gray-600 hover:text-emerald-600 transition font-medium">Localização</a>
                 <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta" target="_blank" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition shadow-md flex items-center gap-2">
                     <i data-lucide="calendar"></i> Agendar
@@ -103,10 +116,10 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t w-full absolute left-0 shadow-lg z-40">
             <ul class="flex flex-col text-center">
                 <li><a href="#sobre" class="block px-4 py-4 border-b">Sobre</a></li>
-                <li><a href="#metodo" class="block px-4 py-4 border-b">Como Funciona</a></li>
-                <li><a href="#investimento" class="block px-4 py-4 border-b">Planos e Valores</a></li>
+                <li><a href="#metodo" class="block px-4 py-4 border-b">Método</a></li>
+                <li><a href="#atendimento" class="block px-4 py-4 border-b">Atendimento</a></li>
                 <li><a href="#localizacao" class="block px-4 py-4 border-b">Localização</a></li>
-                <li><a href="https://wa.me/5551991333905" class="block px-4 py-4 bg-emerald-600 text-white font-bold uppercase">Agendar no WhatsApp</a></li>
+                <li><a href="https://wa.me/5551991333905" class="block px-4 py-4 bg-emerald-600 text-white font-bold">Agendar no WhatsApp</a></li>
             </ul>
         </div>
     </nav>
@@ -118,66 +131,91 @@
                 <div class="mb-8 flex justify-center lg:justify-start">
                     <img src="final-image.jpg" alt="Logo Leandro Alves" class="h-64 md:h-80 lg:h-96 w-auto max-w-full object-contain mix-blend-multiply">
                 </div>
-                <h1 class="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6 uppercase">
+                <h1 class="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
                     Nutrição Clínica e Esportiva
                 </h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Especializado em Clínica Hospitalar, Geriatria e Nutrição Esportiva em Porto Alegre. Abordagem prática e eficaz, longe de modismos e dietas restritivas.
+                    Especializado em Clínica Hospitalar, Geriatria e Nutrição Esportiva em Porto Alegre. Abordagem prática e eficaz, baseada em ciência e livre de modismos.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#metodo" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition shadow-lg text-center flex items-center justify-center gap-2 uppercase tracking-wider">
+                    <a href="#metodo" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition shadow-lg text-center flex items-center justify-center gap-2">
                         Conhecer o Método
                     </a>
                 </div>
                 <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
                     <div class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Certificação ISAK</div>
                     <div class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> CRN2 20221</div>
-                    <div class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Experiência Hospitalar</div>
+                    <div class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Experiência Hospitalar de alta complexidade</div>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 relative flex justify-center">
                 <div class="absolute w-full h-full bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
                 <div class="relative z-10">
-                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Leandro Alves" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-4 border-white object-cover">
+                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Leandro Alves - Nutricionista" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto border-4 border-white object-cover">
                     <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-emerald-50 hidden md:block">
-                        <p class="font-bold text-gray-800">Certificação Internacional</p>
-                        <p class="text-emerald-600 text-sm">ISAK Nível 1</p>
+                        <p class="font-bold text-gray-800">Nível 1</p>
+                        <p class="text-emerald-600 text-sm">Certificação ISAK</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Bio Section -->
+    <!-- Bio Section (Sobre) -->
     <section id="sobre" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <!-- Nova Foto no Tamanho Total do Container -->
             <div class="mb-4">
                 <img src="foto leandroo.jpeg" alt="Nutricionista Leandro Alves no consultório" class="w-full h-auto rounded-3xl shadow-2xl border-4 border-white object-cover">
             </div>
-            <!-- Legenda com Especializações -->
             <div class="text-center mb-16">
-                <p class="text-emerald-700 font-bold text-sm md:text-base uppercase tracking-widest italic">
-                    Especialista em Nutrição Esportiva, Nutrição Clínica e Nutrição em Doenças Crônicas
+                <p class="text-emerald-700 font-bold text-sm md:text-base uppercase tracking-widest">
+                    Especialista em Nutrição Esportiva, Nutrição Clínica e Geriatria
                 </p>
             </div>
 
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Quem é Paulo Leandro Alves?</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Quem é Paulo Leandro Alves?</h2>
                 <div class="w-20 h-1 bg-emerald-500 mx-auto rounded"></div>
             </div>
+            
+            <!-- História pessoal - diferencial ético e humano -->
             <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 shadow-sm mb-10">
                 <p class="text-lg leading-relaxed text-gray-700 mb-6">
                     <i data-lucide="quote" class="inline w-6 h-6 text-emerald-400 mb-2"></i>
-                    A minha jornada na nutrição é movida por uma história pessoal intensa. Conheço o desafio por dentro: fui uma criança e adolescente obeso e, até hoje, compreendo a luta de quem tem facilidade para ganhar peso. Essa batalha constante é o que me motiva a buscar, diariamente, a minha melhor versão física e de saúde. Como praticante assíduo de musculação e artes marciais, aprendi a transformar essa luta em força, guiando meus pacientes com empatia e método.
+                    A minha jornada na nutrição é movida por uma história pessoal intensa. Conheço o desafio por dentro: fui uma criança e adolescente com obesidade e, até hoje, compreendo a luta de quem tem facilidade para ganhar peso. Essa batalha constante é o que me motiva a buscar, diariamente, a minha melhor versão física e de saúde. Como praticante assíduo de musculação e artes marciais, aprendi a transformar essa luta em força, guiando meus pacientes com empatia e método.
                 </p>
                 <p class="text-lg leading-relaxed text-gray-700">
-                    Além da vivência esportiva, minha carreira se fundamenta na especialização em nutrição geriátrica e clínica. Minha atuação no Hospital de Clínicas de Porto Alegre (HCPA) e em instituições de longa permanência para idosos me deu a expertise necessária para lidar com casos complexos. Tenho vasta experiência no manejo de doenças crônicas, prevenção da sarcopenia (perda muscular) e na adaptação alimentar para garantir longevidade e qualidade de vida na terceira idade.
+                    Além da vivência esportiva, minha carreira se fundamenta na especialização em nutrição geriátrica e clínica. Minha atuação no Hospital de Clínicas de Porto Alegre (HCPA) e em instituições de longa permanência para idosos me deu a expertise necessária para lidar com casos complexos. Tenho experiência no manejo de doenças crônicas, prevenção da sarcopenia (perda muscular) e na adaptação alimentar para promover longevidade com qualidade de vida.
                     <i data-lucide="quote" class="inline w-6 h-6 text-emerald-400 ml-2 rotate-180"></i>
                 </p>
             </div>
             
-            <!-- Instagram Link Section -->
+            <!-- Diferenciais técnicos (substitui antiga seção de resultados) -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="text-center p-4">
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="hospital" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Experiência Hospitalar</h3>
+                    <p class="text-sm text-gray-500 mt-2">Atuação no HCPA e em instituições de longa permanência</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="activity" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Avaliação ISAK Nível 1</h3>
+                    <p class="text-sm text-gray-500 mt-2">Padrão ouro em antropometria - 21 medidas científicas</p>
+                </div>
+                <div class="text-center p-4">
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Abordagem Humanizada</h3>
+                    <p class="text-sm text-gray-500 mt-2">Baseada na sua história, rotina e necessidades individuais</p>
+                </div>
+            </div>
+            
+            <!-- Instagram Link -->
             <div class="flex justify-center">
                 <a href="https://instagram.com/leandro.alves.nutri" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition flex items-center gap-3">
                     <i data-lucide="instagram"></i> Siga no Instagram @leandro.alves.nutri
@@ -186,164 +224,215 @@
         </div>
     </section>
 
-    <!-- Como Funciona / Método -->
+    <!-- Método de Trabalho (substitui "Como Funciona") -->
     <section id="metodo" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 uppercase">Como Funciona o Atendimento</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto italic">Processo focado em resultados reais, prático e personalizado.</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Meu Método de Trabalho</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Processo estruturado e personalizado, focado na sua aderência e evolução consistente.</p>
             </div>
 
-            <!-- Steps -->
+            <!-- Steps do atendimento (semântica ética) -->
             <div class="grid md:grid-cols-4 gap-6 mb-16">
                 <div class="bg-white p-8 rounded-xl card-shadow border-b-4 border-emerald-500 text-center">
                     <div class="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">1</div>
-                    <h3 class="font-bold mb-2">Agendamento</h3>
-                    <p class="text-xs text-gray-500">Formulário pré-consulta enviado para entender sua rotina e objetivos.</p>
+                    <h3 class="font-bold mb-2">Avaliação Inicial</h3>
+                    <p class="text-xs text-gray-500">Questionário detalhado para entender sua rotina, histórico e objetivos.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl card-shadow border-b-4 border-emerald-500 text-center">
                     <div class="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
-                    <h3 class="font-bold mb-2">Consulta</h3>
-                    <p class="text-xs text-gray-500">Avaliação física ISAK ou Fotos (online) + Anamnese até 60 min.</p>
+                    <h3 class="font-bold mb-2">Consulta Completa</h3>
+                    <p class="text-xs text-gray-500">Anamnese + Avaliação ISAK (presencial) ou análise de bioimpedância (online).</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl card-shadow border-b-4 border-emerald-500 text-center">
                     <div class="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
-                    <h3 class="font-bold mb-2">Entrega</h3>
-                    <p class="text-xs text-gray-500">Plano enviado em PDF, impresso ou via Aplicativo exclusivo.</p>
+                    <h3 class="font-bold mb-2">Plano Personalizado</h3>
+                    <p class="text-xs text-gray-500">Elaborado com até 7 dias, considerando suas preferências e necessidades.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl card-shadow border-b-4 border-emerald-500 text-center">
                     <div class="bg-emerald-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">4</div>
-                    <h3 class="font-bold mb-2">Ajustes</h3>
-                    <p class="text-xs text-gray-500">Suporte via WhatsApp por 7 dias para garantir adaptação total.</p>
+                    <h3 class="font-bold mb-2">Acompanhamento</h3>
+                    <p class="text-xs text-gray-500">Suporte via WhatsApp por 7 dias e reavaliações periódicas.</p>
                 </div>
             </div>
 
-            <!-- Processo Detalhado -->
+            <!-- Detalhamento do Processo (Educativo) -->
             <div class="mt-16 bg-white rounded-2xl p-8 card-shadow max-w-4xl mx-auto mb-16 border border-gray-100">
-                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center uppercase tracking-wider">Processo Detalhado do Atendimento</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Como é o atendimento passo a passo</h3>
                 <div class="space-y-8">
                     <div class="flex items-start gap-4">
                         <div class="bg-emerald-100 p-2 rounded-full text-emerald-600"><i data-lucide="message-circle" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Primeiro Contato e Agendamento</h4>
-                            <p class="text-gray-600 text-sm mt-1">Você agenda sua consulta e recebe imediatamente um formulário de pré-consulta. Este questionário detalhado é essencial para otimizar nosso tempo juntos e entender profundamente suas necessidades.</p>
+                            <h4 class="font-bold text-gray-800">1. Pré-consulta</h4>
+                            <p class="text-gray-600 text-sm mt-1">Após o agendamento, você recebe um formulário para que eu conheça sua rotina, histórico de saúde, exames e objetivos. Isso otimiza nosso tempo e torna a consulta mais produtiva.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
                         <div class="bg-emerald-100 p-2 rounded-full text-emerald-600"><i data-lucide="stethoscope" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Consulta Presencial ou Online (até 60 minutos)</h4>
+                            <h4 class="font-bold text-gray-800">2. Consulta (60 min)</h4>
                             <p class="text-gray-600 text-sm mt-1">
-                                <strong>Presencial:</strong> Realizo avaliação física completa com metodologia ISAK (antropometria de alta precisão). É necessário vir com roupa de ginástica para a avaliação.<br><br>
-                                <strong>Online:</strong> Análise detalhada via vídeo. Você pode realizar avaliação física em local de confiança ou com balança de bioimpedância e me enviar os resultados. É fundamental repetir o exame no mesmo local e condições para avaliarmos o progresso com precisão.<br><br>
-                                Ambas as modalidades incluem anamnese completa, análise de exames bioquímicos e discussão detalhada dos objetivos.
+                                <strong>Presencial:</strong> Realizo avaliação física com metodologia ISAK (21 medidas). Venha com roupa confortável.<br><br>
+                                <strong>Online:</strong> Análise por vídeo com base em fotos e exames de bioimpedância (se disponíveis). Oriento sobre como padronizar as medidas para futuras comparações.<br><br>
+                                Em ambas, fazemos anamnese completa, análise de exames e definimos metas realistas juntos.
                             </p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
                         <div class="bg-emerald-100 p-2 rounded-full text-emerald-600"><i data-lucide="clipboard-check" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Elaboração do Plano Alimentar</h4>
-                            <p class="text-gray-600 text-sm mt-1">Dedico até 7 dias para elaborar seu plano alimentar personalizado, considerando todas as variáveis: rotina, preferências alimentares e condições de saúde.</p>
+                            <h4 class="font-bold text-gray-800">3. Elaboração do Plano</h4>
+                            <p class="text-gray-600 text-sm mt-1">Dedico até 7 dias para construir um plano alimentar que realmente se encaixe na sua vida, considerando horários, preferências, restrições e condições de saúde.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
                         <div class="bg-emerald-100 p-2 rounded-full text-emerald-600"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Sua Dieta na Palma da Mão</h4>
-                            <p class="text-gray-600 text-sm mt-1">O seu plano alimentar é focado na sua aderência: receba pelo <strong>Aplicativo exclusivo</strong>, em <strong>PDF</strong> de alta qualidade ou <strong>Impresso</strong> diretamente na consulta.</p>
+                            <h4 class="font-bold text-gray-800">4. Plano na palma da sua mão</h4>
+                            <p class="text-gray-600 text-sm mt-1">Você recebe seu plano alimentar em um aplicativo exclusivo no celular, com interação direta e fácil acesso. Através do app, você pode visualizar as refeições, marcar como realizadas, receber notificações e ter todo o suporte necessário para seguir o plano com praticidade no seu dia a dia.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ISAK Photo Section -->
-            <div class="mt-20 flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
+            <!-- ISAK - Destaque para a técnica, não para resultados -->
+            <div id="atendimento" class="mt-20 flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
                 <div class="w-full lg:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6 uppercase tracking-wider">Avaliação Física ISAK</h2>
-                    <p class="text-gray-600 mb-6">A avaliação física é o GPS do seu progresso. Utilizamos 21 medidas científicas para monitorar sua evolução de gordura e massa muscular com precisão internacional.</p>
-                    <p class="text-gray-600 mb-6 font-medium">O método <a href="https://www.isak.global/Home/Index" target="_blank" class="text-emerald-600 underline">ISAK Internacional</a> é o padrão ouro mundial em antropometria.</p>
-                    <p class="bg-amber-50 border-l-4 border-amber-400 p-4 text-sm mb-6 italic">Lembre-se: Para consulta presencial, é necessário comparecer com roupa de ginástica.</p>
+                    <h2 class="text-3xl font-bold mb-6">Avaliação Física ISAK</h2>
+                    <p class="text-gray-600 mb-6">A avaliação física é uma ferramenta fundamental para acompanhar sua evolução de forma objetiva. Utilizo o método ISAK (International Society for the Advancement of Kinanthropometry), que é referência mundial em antropometria.</p>
+                    <p class="text-gray-600 mb-6">Com 21 medidas padronizadas, é possível monitorar com precisão alterações na composição corporal ao longo do tempo, direcionando as estratégias nutricionais de forma personalizada.</p>
+                    
+                    <!-- Mensagem sobre roupas leves -->
+                    <div class="bg-emerald-50 p-4 rounded-lg mb-4">
+                        <p class="text-sm flex items-center gap-2"><i data-lucide="info" class="w-4 h-4 text-emerald-600"></i> Para a avaliação presencial, utilize roupas leves e confortáveis.</p>
+                    </div>
+                    
+                    <!-- Imagem de orientação de vestimenta (alta resolução) -->
+                    <div class="mb-6">
+                        <img src="imagem avaliação fisica.png" alt="Orientação para avaliação física: Homens sem camiseta, shorts ou bermuda esportiva e descalço. Mulheres top, shorts ou bermuda esportiva e descalça." class="dress-code-image w-full">
+                        <p class="text-xs text-gray-400 text-center mt-2">Vestimenta adequada para avaliação física precisa</p>
+                    </div>
+                    
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma avaliação física ISAK" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition shadow-lg inline-flex items-center gap-2">
+                        <i data-lucide="calendar"></i> Agendar avaliação física
+                    </a>
                 </div>
-                <div class="w-full lg:w-1/2 flex flex-col items-center">
-                    <img src="foto isak.jpeg" alt="Avaliação ISAK" class="w-full max-h-[500px] object-contain rounded-2xl shadow-2xl mb-6 bg-white">
-                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma *avaliação física ISAK*" class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-emerald-700 transition shadow-lg text-center flex items-center justify-center gap-2 w-full md:w-auto uppercase tracking-wider">
-                        🎯 Agendar avaliação física ISAK
+                <div class="w-full lg:w-1/2">
+                    <img src="foto isak.jpeg" alt="Procedimento de avaliação física ISAK" class="w-full rounded-2xl shadow-2xl">
+                    <p class="text-xs text-gray-400 text-center mt-2">Procedimento padronizado - ISAK Nível 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades de Atendimento (substitui "Investimento") -->
+    <section id="atendimento" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Modalidades de Atendimento</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Escolha a opção que melhor se adapta à sua rotina. O investimento é informado mediante contato, conforme recomendações do CFN.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="p-8 border border-gray-100 bg-slate-50 rounded-2xl card-shadow text-center">
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="video" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Consulta Online</h3>
+                    <p class="text-sm text-gray-500 mb-6">Atendimento por vídeo, análise de exames e fotos, suporte via aplicativo.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre consulta online" class="block w-full py-3 border border-emerald-500 text-emerald-600 font-bold rounded-lg hover:bg-emerald-50 transition">
+                        Informações via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="p-8 border-2 border-emerald-500 bg-white rounded-2xl card-shadow scale-105 relative">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-4 py-1 rounded-full text-xs font-bold">Mais buscado</span>
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="building" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Consulta Presencial</h3>
+                    <p class="text-sm text-gray-500 mb-6">Atendimento completo com avaliação ISAK Nível 1, anamnese e plano personalizado.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre consulta presencial" class="block w-full py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition shadow-md">
+                        Informações via WhatsApp
+                    </a>
+                </div>
+                
+                <div class="p-8 border border-gray-100 bg-slate-50 rounded-2xl card-shadow text-center">
+                    <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="home" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Atendimento Domiciliar</h3>
+                    <p class="text-sm text-gray-500 mb-6">Levo todos os equipamentos até sua casa em Porto Alegre, para maior comodidade.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre consulta domiciliar" class="block w-full py-3 border border-emerald-500 text-emerald-600 font-bold rounded-lg hover:bg-emerald-50 transition">
+                        Informações via WhatsApp
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Investimento / Planos -->
-    <section id="investimento" class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-6xl text-center">
-            <h2 class="text-3xl font-bold mb-4 uppercase">Investimento na sua Saúde</h2>
-            <p class="text-gray-500 mb-16 italic">Escolha o melhor formato para seus objetivos.</p>
+            <!-- Planos de Acompanhamento -->
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold mb-4">Planos de Acompanhamento</h3>
+                <p class="text-gray-500 max-w-2xl mx-auto">Para quem busca consistência e resultados duradouros, ofereço planos com reavaliações periódicas e suporte contínuo.</p>
+            </div>
             
-            <div class="grid md:grid-cols-3 gap-8 mb-20">
-                <div class="p-8 border border-gray-100 bg-slate-50 rounded-2xl card-shadow">
-                    <h3 class="font-bold text-xl mb-4">Consulta Online</h3>
-                    <p class="text-sm text-gray-500 mb-6">Atendimento por vídeo, análise de fotos e suporte via Aplicativo.</p>
-                    <a href="https://wa.me/5551991333905?text=Olá! Valor da consulta online" class="block w-full py-3 border border-emerald-500 text-emerald-600 font-bold rounded-lg hover:bg-emerald-50 transition">Consultar Valor</a>
-                </div>
-                <div class="p-8 border-2 border-emerald-500 bg-white rounded-2xl card-shadow scale-105 relative">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Presencial</span>
-                    <h3 class="font-bold text-xl mb-4">No Consultório</h3>
-                    <p class="text-sm text-gray-500 mb-6">Consulta completa + Avaliação ISAK Nível 1 inclusa + Suporte.</p>
-                    <a href="https://wa.me/5551991333905?text=Olá! Valor da consulta presencial" class="block w-full py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition shadow-md">Consultar Valor</a>
-                </div>
-                <div class="p-8 border border-gray-100 bg-slate-50 rounded-2xl card-shadow">
-                    <h3 class="font-bold text-xl mb-4">A Domicílio</h3>
-                    <p class="text-sm text-gray-500 mb-6">Levo todo o equipamento até você em Porto Alegre para sua comodidade.</p>
-                    <a href="https://wa.me/5551991333905?text=Olá! Valor da consulta domicílio" class="block w-full py-3 border border-emerald-500 text-emerald-600 font-bold rounded-lg hover:bg-emerald-50 transition">Consultar Valor</a>
-                </div>
-            </div>
-
-            <!-- Planos -->
-            <h3 class="text-2xl font-bold mb-10 uppercase tracking-widest">Planos de Acompanhamento</h3>
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 card-shadow">
-                    <h4 class="font-bold text-lg mb-4">Trimestral</h4>
-                    <p class="text-xs text-gray-600 mb-6 font-medium">Ajuste inicial e paradas estratégicas mensais.</p>
-                    <a href="https://wa.me/5551991333905?text=Plano Trimestral" class="text-emerald-700 font-bold text-sm uppercase tracking-tighter hover:underline">Saber Mais →</a>
+                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 card-shadow text-center">
+                    <h4 class="font-bold text-xl mb-3">Plano Trimestral</h4>
+                    <p class="text-sm text-gray-600 mb-6">Consulta inicial + 2 reavaliações + suporte por 3 meses.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre o plano trimestral" class="text-emerald-700 font-bold text-sm hover:underline">
+                        Solicitar informações →
+                    </a>
                 </div>
-                <div class="bg-emerald-600 text-white p-8 rounded-2xl card-shadow relative">
-                    <span class="absolute -top-3 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Recomendado</span>
-                    <h4 class="font-bold text-lg mb-4">Semestral</h4>
-                    <p class="text-xs text-emerald-100 mb-6 font-medium">6 meses de foco contínuo com acompanhamento mensal.</p>
-                    <a href="https://wa.me/5551991333905?text=Plano Semestral" class="text-white font-bold text-sm uppercase tracking-tighter hover:underline">Saber Mais →</a>
+                
+                <div class="bg-emerald-600 text-white p-8 rounded-2xl card-shadow text-center relative">
+                    <span class="absolute -top-3 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">Recomendado</span>
+                    <h4 class="font-bold text-xl mb-3">Plano Semestral</h4>
+                    <p class="text-sm text-emerald-100 mb-6">Consulta inicial + 5 reavaliações + suporte prioritário por 6 meses.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre o plano semestral" class="text-white font-bold text-sm hover:underline">
+                        Solicitar informações →
+                    </a>
                 </div>
-                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 card-shadow">
-                    <h4 class="font-bold text-lg mb-4">Anual</h4>
-                    <p class="text-xs text-gray-600 mb-6 font-medium">Mudança definitiva com suporte o ano inteiro.</p>
-                    <a href="https://wa.me/5551991333905?text=Plano Anual" class="text-emerald-700 font-bold text-sm uppercase tracking-tighter hover:underline">Saber Mais →</a>
+                
+                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 card-shadow text-center">
+                    <h4 class="font-bold text-xl mb-3">Plano Anual</h4>
+                    <p class="text-sm text-gray-600 mb-6">Acompanhamento completo com reavaliações trimestrais e suporte contínuo.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre o plano anual" class="text-emerald-700 font-bold text-sm hover:underline">
+                        Solicitar informações →
+                    </a>
                 </div>
             </div>
+            
+            <!-- Nota ética sobre valores -->
+            <p class="text-center text-xs text-gray-400 mt-12 italic">
+                *Os valores dos serviços são informados individualmente, conforme recomendações do Código de Ética do Nutricionista (Resolução CFN nº 599/2018).
+            </p>
         </div>
     </section>
 
-    <!-- Location Section -->
+    <!-- Localização -->
     <section id="localizacao" class="py-20 bg-white border-t">
         <div class="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row gap-12 items-center">
             <div class="w-full md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl font-bold mb-6 uppercase">Localização</h2>
-                <p class="text-gray-600 mb-8 leading-relaxed">Atendimento especializado em Porto Alegre, RS. Ambiente preparado para oferecer privacidade e conforto total.</p>
+                <h2 class="text-3xl font-bold mb-6">Localização</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">Atendimento presencial em Porto Alegre, em ambiente pensado para seu conforto e privacidade. Agendamento exclusivamente via WhatsApp.</p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start justify-center md:justify-start gap-4">
-                        <div class="bg-emerald-100 p-3 rounded-full text-emerald-600"><i data-lucide="map-pin"></i></div>
+                        <div class="bg-emerald-100 p-3 rounded-full text-emerald-600">
+                            <i data-lucide="map-pin"></i>
+                        </div>
                         <div>
                             <h3 class="font-bold">Endereço</h3>
-                            <p class="text-gray-500 text-sm">Porto Alegre, RS</p>
-                            <p class="text-[10px] text-gray-400 mt-1 italic">Agendamento direto pelo WhatsApp</p>
+                            <p class="text-gray-500">Porto Alegre, RS</p>
+                            <p class="text-xs text-gray-400 mt-2">Clique no mapa para ver o endereço completo</p>
                         </div>
                     </div>
                 </div>
-                <a href="https://www.google.com/search?q=nutricionista+leandro&oq=nutricionista+leandro&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPDIGCAQQRRhB0gEINTE2NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&lqi=ChVudXRyaWNpb25pc3RhIGxlYW5kcm9IutCRvtC9gIAIWh8QABABGAAYASIVbnV0cmljaW9uaXN0YSBsZWFuZHJvkgEMbnV0cml0aW9uaXN0#rlimm=3344163639918427506" target="_blank" class="bg-emerald-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-700 transition inline-flex items-center gap-2 shadow-md uppercase tracking-wider">
-                    <i data-lucide="map"></i> Abrir no Google Maps
+                <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta presencial" class="bg-emerald-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-700 transition inline-flex items-center gap-2 shadow-md">
+                    <i data-lucide="calendar"></i> Agendar atendimento
                 </a>
             </div>
             <div class="w-full md:w-1/2">
+                <!-- LINK DO MAPA MANTIDO COMO ESTAVA ORIGINALMENTE -->
                 <a href="https://www.google.com/search?q=nutricionista+leandro&oq=nutricionista+leandro&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPDIGCAQQRRhB0gEINTE2NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&lqi=ChVudXRyaWNpb25pc3RhIGxlYW5kcm9IutCRvtC9gIAIWh8QABABGAAYASIVbnV0cmljaW9uaXN0YSBsZWFuZHJvkgEMbnV0cml0aW9uaXN0#rlimm=3344163639918427506" target="_blank" class="map-container bg-slate-100 rounded-2xl block group relative">
                     <div class="map-overlay"></div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110550.57484441628!2d-51.2283345!3d-30.0277041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519785570407df3%3A0x75c55825543d970!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1738700000000!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
@@ -356,10 +445,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-white font-bold text-2xl mb-1 uppercase tracking-widest">Leandro Alves</h2>
-            <p class="text-sm mb-8 text-emerald-500 font-medium">Nutricionista | CRN2 20221</p>
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-white font-bold text-2xl mb-1">Leandro Alves</h2>
+            <p class="text-sm mb-8 text-emerald-500">Nutricionista | CRN2 20221</p>
             
             <div class="flex justify-center gap-8 mb-8">
                 <a href="https://instagram.com/leandro.alves.nutri" target="_blank" class="hover:text-emerald-500 transition flex items-center gap-2">
@@ -369,30 +458,44 @@
                     <i data-lucide="mail" class="w-5 h-5"></i> E-mail
                 </a>
                 <a href="https://wa.me/5551991333905" class="hover:text-emerald-500 transition flex items-center gap-2">
-                    <i data-lucide="phone" class="w-5 h-5"></i> Contato
+                    <i data-lucide="phone" class="w-5 h-5"></i> WhatsApp
                 </a>
             </div>
             
-            <div class="pt-8 border-t border-gray-800 text-[10px] text-gray-500 flex flex-col gap-2">
-                <p>&copy; 2025 Leandro Alves Nutricionista. Porto Alegre, Brasil.</p>
-                <p>Todos os direitos reservados.</p>
+            <!-- Informações éticas - RESOLUÇÃO CFN ABAIXO DO E-MAIL -->
+            <div class="pt-8 border-t border-gray-800 text-xs text-gray-500">
+                <p>&copy; 2025 Leandro Alves Nutricionista. Todos os direitos reservados.</p>
+                <p class="mt-2">Comunicação em conformidade com a <strong>Resolução CFN nº 599/2018</strong>.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5551991333905" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 animate-bounce">
+    <a href="https://wa.me/5551991333905" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
     <script>
         lucide.createIcons();
+        
+        // Mobile menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         if(btn && menu) {
             btn.onclick = () => menu.classList.toggle('hidden');
             menu.querySelectorAll('a').forEach(l => l.onclick = () => menu.classList.add('hidden'));
         }
+        
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
