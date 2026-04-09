@@ -13,38 +13,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="R6gew60n-p6zuITA9xfrGHIHJDrO8-D67CFFHKVVDqg" />
-    <meta name="description" content="Atendimento Online para todo o Brasil | Especialista em Nutrição Esportiva e Clínica. Consulta presencial em Porto Alegre com Certificado ISAK." />
+    
+    <!-- SEO Aprimorado: Novas Palavras-Chave e Descrição -->
+    <meta name="description" content="Nutricionista em Porto Alegre especialista em Saúde do Idoso, Nutrição Clínica e Esportiva. Atendimento Domiciliar para acamados, Presencial (MedPlex) e Online. Sarcopenia, disfagia e nutrição enteral." />
+    <meta name="keywords" content="Nutricionista para idosos, nutricionista domiciliar Porto Alegre, idosos acamados, gerontologia, nutrição geriátrica, sarcopenia, disfagia, nutrição enteral, nutrição esportiva, emagrecimento, MedPlex Santana, PICCAP Hospital de Clínicas" />
     
     <!-- CORREÇÃO DE INDEXAÇÃO E SEO: URL com WWW -->
     <link rel="canonical" href="https://www.nutricionistaleandro.com.br/" />
     
-    <!-- FAVICON (Configuração para Google e Navegadores) -->
+    <!-- FAVICON -->
     <link rel="icon" href="favicom-500x500.png" type="image/png" />
     <link rel="shortcut icon" href="favicom-500x500.png" type="image/png" />
     <link rel="apple-touch-icon" href="favicom-500x500.png" />
     
-    <!-- Metadados de Imagem (Open Graph - WhatsApp e Redes Sociais) -->
+    <!-- Metadados de Imagem (Open Graph) -->
     <meta property="og:url" content="https://www.nutricionistaleandro.com.br/" />
-    <meta property="og:title" content="Leandro Alves | Atendimento Online para todo o Brasil | Especialista em Nutrição Esportiva e Clínica" />
-    <meta property="og:description" content="Atendimento Online para todo o Brasil | Especialista em Nutrição Esportiva e Clínica. Consulta presencial em Porto Alegre." />
+    <meta property="og:title" content="Leandro Alves | Nutrição Clínica, Esportiva e Gerontologia" />
+    <meta property="og:description" content="Especialista em Saúde do Idoso, Clínica e Esportiva. Atendimento presencial, online e domiciliar em Porto Alegre." />
     <meta property="og:image" content="https://www.nutricionistaleandro.com.br/favicom-500x500.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
     
-    <title>Leandro Alves | Atendimento Online para todo o Brasil | Especialista em Nutrição Esportiva e Clínica</title>
+    <title>Leandro Alves | Nutricionista Clínico, Esportivo e Saúde do Idoso | Porto Alegre</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS & Lucide Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -60,9 +62,9 @@
                             600: '#16a34a',
                             700: '#15803d',
                             800: '#166534',
-                            900: '#064e3b', // Deep elegant green
+                            900: '#064e3b',
                         },
-                        surface: '#fafaf9', // stone-50
+                        surface: '#fafaf9',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -74,13 +76,8 @@
     </script>
 
     <style>
-        /* Custom Styles & Animations */
-        body {
-            background-color: #fafaf9;
-            color: #292524;
-        }
+        body { background-color: #fafaf9; color: #292524; }
         
-        /* Glassmorphism for Navbar */
         .glass-nav {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -88,7 +85,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Soft Shadows */
         .premium-shadow {
             box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
             transition: all 0.4s ease;
@@ -98,7 +94,6 @@
             transform: translateY(-4px);
         }
 
-        /* Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -112,6 +107,20 @@
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
+
+        /* Estilos do Acordeão (Cards Expansíveis) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out;
+            opacity: 0;
+        }
+        .accordion-item.active .accordion-content {
+            opacity: 1;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="antialiased font-sans overflow-x-hidden">
@@ -120,12 +129,11 @@
     <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
-            <!-- Logo area Atualizada com as 3 linhas -->
             <a href="#" class="flex items-center gap-3 group">
                 <img src="favicom-500x500.png" alt="Icone Logo" class="w-10 h-10 md:w-11 md:h-11 group-hover:rotate-12 transition-transform duration-300 shrink-0">
                 <div class="flex flex-col justify-center">
                     <span class="font-serif font-bold text-lg md:text-xl text-brand-900 tracking-wide leading-none mb-1">Leandro Alves</span>
-                    <span class="text-[11px] md:text-xs text-stone-600 font-medium leading-none mb-0.5">Nutricionista Clínico e Esportivo</span>
+                    <span class="text-[11px] md:text-xs text-stone-600 font-medium leading-none mb-0.5">Nutrição Clínica, Esportiva e Idosos</span>
                     <span class="text-[10px] md:text-[11px] text-brand-700 font-bold leading-none">CRN2 20221</span>
                 </div>
             </a>
@@ -133,9 +141,10 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#sobre" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Sobre mim</a>
+                <a href="#especialidades" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Geriatria & Clínica</a>
+                <a href="#esportiva" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Esportiva</a>
                 <a href="#metodo" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">O Método</a>
-                <a href="#atendimento" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Avaliação & Planos</a>
-                <a href="#localizacao" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Localização</a>
+                <a href="#atendimento" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Modalidades</a>
                 <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-800 transition-all shadow-lg shadow-brand-900/20 flex items-center gap-2">
                     Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
@@ -147,13 +156,14 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (Fullscreen overlay) -->
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-stone-100 absolute w-full left-0 shadow-2xl h-screen overflow-y-auto pb-24 top-[70px]">
             <div class="flex flex-col px-6 py-4 space-y-2">
                 <a href="#sobre" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Sobre mim</a>
-                <a href="#metodo" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">O Método</a>
-                <a href="#atendimento" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Avaliação & Planos</a>
-                <a href="#localizacao" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Localização</a>
+                <a href="#especialidades" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Geriatria e Foco Clínico</a>
+                <a href="#esportiva" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Nutrição Esportiva</a>
+                <a href="#metodo" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Como Funciona</a>
+                <a href="#atendimento" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Modalidades e Planos</a>
                 <a href="https://wa.me/5551991333905" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-4 py-4 rounded-xl text-center font-medium mt-6 block w-full shadow-lg text-lg flex items-center justify-center gap-2">
                     <i data-lucide="message-circle" class="w-5 h-5"></i> Agendar no WhatsApp
                 </a>
@@ -163,7 +173,6 @@
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 relative overflow-hidden bg-surface">
-        <!-- Abstract background elements -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-100 rounded-full mix-blend-multiply filter blur-[80px] opacity-60 -z-10 translate-x-1/3 -translate-y-1/4"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-stone-200 rounded-full mix-blend-multiply filter blur-[60px] opacity-50 -z-10 -translate-x-1/2 translate-y-1/4"></div>
 
@@ -172,32 +181,32 @@
             <div class="w-full lg:w-1/2 text-center lg:text-left z-10 reveal">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-800 text-sm font-medium mb-6">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                    Atendimento em Porto Alegre & Online
+                    Online, Consultório Físico ou Domiciliar
                 </div>
                 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-900 leading-[1.15] mb-6">
-                    Nutrição baseada em ciência, voltada para <span class="italic text-brand-700">resultados reais.</span>
+                    Nutrição baseada em ciência para <span class="italic text-brand-700">Longevidade e Performance.</span>
                 </h1>
                 
                 <p class="text-lg text-stone-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Especialista em Nutrição Clínica e Esportiva. Transforme seu corpo, otimize sua performance e ganhe qualidade de vida com um método 100% personalizado para a sua rotina.
+                    Especialista no acompanhamento de adultos e <strong>pessoas idosas</strong>. Seja para otimizar seus treinos, recuperar a saúde, tratar doenças crônicas ou garantir um envelhecimento com autonomia e qualidade de vida.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-brand-800 transition-colors shadow-lg shadow-brand-900/20 text-center flex justify-center items-center gap-2">
                         <i data-lucide="calendar" class="w-5 h-5"></i> Agendar Consulta
                     </a>
-                    <a href="#metodo" class="bg-white text-brand-900 border border-brand-200 px-8 py-4 rounded-xl font-medium hover:bg-brand-50 transition-colors text-center">
-                        Como funciona
+                    <a href="#especialidades" class="bg-white text-brand-900 border border-brand-200 px-8 py-4 rounded-xl font-medium hover:bg-brand-50 transition-colors text-center">
+                        Áreas de Atuação
                     </a>
                 </div>
 
                 <div class="mt-10 pt-8 border-t border-stone-200 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-stone-500 font-medium">
                     <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600"></i> Certificação Internacional ISAK
+                        <i data-lucide="shield-check" class="w-5 h-5 text-brand-600"></i> HCPA (PICCAP)
                     </div>
                     <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600"></i> CRN2 20221
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600"></i> Certificação ISAK
                     </div>
                 </div>
             </div>
@@ -205,8 +214,7 @@
             <!-- Hero Image -->
             <div class="w-full lg:w-1/2 relative reveal delay-200">
                 <div class="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0">
-                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Nutricionista Leandro Alves" class="w-full h-auto rounded-3xl shadow-2xl relative z-10 border-8 border-white object-cover object-top" />
-                    <!-- Decorative element -->
+                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Nutricionista Leandro Alves atuando" class="w-full h-auto rounded-3xl shadow-2xl relative z-10 border-8 border-white object-cover object-top" />
                     <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-900 rounded-3xl -z-0"></div>
                 </div>
             </div>
@@ -218,20 +226,20 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-brand-700/50">
                 <div class="reveal">
-                    <i data-lucide="dumbbell" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
-                    <p class="text-white font-medium text-sm md:text-base">Nutrição Esportiva</p>
+                    <i data-lucide="heart-handshake" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
+                    <p class="text-white font-medium text-sm md:text-base">Geriatria e Longevidade</p>
                 </div>
                 <div class="reveal delay-100">
                     <i data-lucide="heart-pulse" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
                     <p class="text-white font-medium text-sm md:text-base">Nutrição Clínica</p>
                 </div>
                 <div class="reveal delay-200">
-                    <i data-lucide="users" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
-                    <p class="text-white font-medium text-sm md:text-base">Saúde do Idoso</p>
+                    <i data-lucide="dumbbell" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
+                    <p class="text-white font-medium text-sm md:text-base">Nutrição Esportiva</p>
                 </div>
                 <div class="reveal delay-300">
-                    <img src="favicom-500x500.png" alt="Logo Leandro" class="h-10 mx-auto object-contain mix-blend-screen opacity-80 brightness-200 grayscale mb-2">
-                    <p class="text-white font-medium text-sm md:text-base">Método Exclusivo</p>
+                    <i data-lucide="home" class="w-8 h-8 mx-auto text-brand-300 mb-3"></i>
+                    <p class="text-white font-medium text-sm md:text-base">Atendimento Domiciliar</p>
                 </div>
             </div>
         </div>
@@ -261,11 +269,14 @@
                         <p class="mb-4">
                             É por viver essa realidade diariamente que o meu método é diferente. Eu não acredito em dietas restritivas ou protocolos milagrosos que prometem rapidez, mas entregam baixa adesão. Meu foco é a reeducação alimentar e a recomposição corporal através de resultados duradouros, adaptando a nutrição à sua rotina real, sem sofrimento.
                         </p>
-                        <p>
+                        <p class="mb-4">
+                            Fiz parte do prestigiado programa <strong>PICCAP no Hospital de Clínicas de Porto Alegre (HCPA)</strong>, com foco em geriatria, somando intensa participação em pesquisas clínicas e congressos da área.
+                        </p>
+                        <p class="mb-4 text-brand-900 font-medium">
                             Além da vivência prática, minha conduta possui uma base técnica rigorosa. Com experiência em ambientes de alta complexidade, como Hospitais, Clínicas e Instituições de Longa Permanência para Idosos (ILPIs), trago a segurança necessária para o manejo de doenças crônicas, prevenção da sarcopenia e a busca por uma longevidade com qualidade de vida.
                         </p>
-                        <p class="mb-4">
-                            Essa batalha constante é o que me motiva. Como praticante assíduo de musculação e artes marciais, transformei essa luta em força e hoje guio meus pacientes com um equilíbrio fundamental: empatia, método e ciência.
+                        <p>
+                            Essa batalha constante é o que me motiva. Como praticante assíduo de musculação há mais de 20 anos e praticante de artes marciais, transformei essa luta em força e hoje guio meus pacientes com um equilíbrio fundamental: <strong>empatia, método e ciência.</strong>
                         </p>
                     </div>
 
@@ -278,123 +289,282 @@
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
+                                <span class="text-stone-700"><strong>Programa PICCAP</strong> com foco em Geriatria (Hospital de Clínicas - HCPA)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
+                                <span class="text-stone-700"><strong>Pós-graduado</strong> em Nutrição Clínica e Doenças Crônicas</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
                                 <span class="text-stone-700"><strong>Pós-graduado</strong> em Nutrição Esportiva</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
-                                <span class="text-stone-700"><strong>Pós-graduado</strong> em Nutrição Clínica</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
-                                <span class="text-stone-700"><strong>Pós-graduado</strong> em Nutrição nas Doenças Crônicas</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
-                                <span class="text-stone-700"><strong>Certificação ISAK Nível 1</strong> (Antropometria Clínica)</span>
+                                <span class="text-stone-700"><strong>Certificação Internacional ISAK Nível 1</strong> (Antropometria)</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-brand-500 mt-2 shrink-0"></div>
                                 <span class="text-stone-700"><strong>Bacharelado</strong> em Nutrição</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <div class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0"></div>
-                                <span class="text-stone-700">MBA em Consultoria de Alimentos <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full ml-1 font-medium">Em curso</span></span>
-                            </li>
                         </ul>
-                    </div>
-
-                    <!-- Botão do Instagram -->
-                    <div class="mt-8">
-                        <a href="https://instagram.com/leandro.alves.nutri" target="_blank" class="inline-flex items-center gap-3 text-stone-700 font-semibold hover:text-brand-900 transition group">
-                            <img src="icone instagram.jpg" alt="Ícone Instagram" class="w-10 h-10 rounded-xl shadow-md group-hover:scale-110 transition-transform object-cover">
-                            Acompanhe no Instagram @leandro.alves.nutri
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilares / Método -->
+    <!-- NOVA SEÇÃO: Especialidades e Saúde do Idoso (Acordeões) -->
+    <section id="especialidades" class="py-24 bg-brand-50 border-y border-brand-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Foco Clínico e Geriatria</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Nutrição para Pessoas Idosas e Reabilitação</h2>
+                <p class="text-stone-600 text-lg">
+                    Atendimentos voltados para pessoas 60+ que buscam a longevidade com qualidade de vida ou que necessitam de apoio na recuperação da saúde durante o tratamento de doenças agudas ou crônicas.
+                </p>
+                <p class="text-brand-700 text-sm font-medium mt-4"><i data-lucide="hand-pointer" class="w-4 h-4 inline"></i> Clique nos cards abaixo para ler sobre cada especialidade</p>
+            </div>
+
+            <!-- Grid de Acordeões -->
+            <div class="grid md:grid-cols-2 gap-4 lg:gap-6 reveal delay-100">
+                
+                <!-- Item 1 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="sun" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Envelhecimento Saudável</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Foco na prevenção de doenças, manutenção da autonomia e vitalidade. A nutrição preventiva é ajustada para manter a energia diária, preservar a memória e fortalecer o sistema imunológico ao longo dos anos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="scale-3d" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Perda de peso e Desnutrição</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Tratamento focado em reverter quadros de perda de peso involuntária ou desnutrição severa, oferecendo estratégias de alta densidade nutricional, suplementação específica e adaptação alimentar para facilitar a aceitação.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="bone" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Sarcopenia</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Abordagem nutricional direcionada à prevenção e reversão da perda de massa, força e função muscular no idoso. Ajuste preciso de proteínas e suplementação para devolver firmeza e segurança nos movimentos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="utensils-crossed" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Disfagia e Nutrição Enteral</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Manejo em dificuldades de deglutição (engasgos), adaptando texturas com segurança. Atuo também no cálculo, prescrição e acompanhamento de dieta via sonda (Terapia Nutricional Enteral) de forma domiciliar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="activity" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Hipertensão, Diabetes e Dislipidemia</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Controle efetivo de doenças crônicas não transmissíveis. Planos que ajudam a regular pressão arterial, glicemia e colesterol, reduzindo sintomas e muitas vezes colaborando para o ajuste medicamentoso (junto ao médico).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="ribbon" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Câncer (Oncologia)</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Suporte nutricional durante quimioterapia, radioterapia ou pré/pós cirúrgico. Foco em minimizar efeitos colaterais (náuseas, feridas na boca), preservar o estado nutricional e apoiar o sistema imunológico na batalha contra o câncer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="brain" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Demências (Alzheimer, etc)</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Acompanhamento especializado com foco na aceitação alimentar, visto que confusão mental, esquecimento e recusa são comuns. Orientações diretas aos familiares e cuidadores para facilitar a rotina diária e garantir a nutrição.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="accordion-item bg-white rounded-2xl border border-stone-200 premium-shadow cursor-pointer overflow-hidden">
+                    <div class="flex justify-between items-center p-6 bg-white hover:bg-stone-50 transition-colors">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600"><i data-lucide="filter" class="w-5 h-5"></i></div>
+                            <h3 class="font-bold text-brand-900 text-lg">Doença Renal</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-stone-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 pt-2 text-stone-600 border-t border-stone-100 mt-2">
+                            Conduta altamente específica e milimétrica (controle de potássio, fósforo, sódio, proteínas e líquidos) para proteger a função renal (fase conservadora) ou dar suporte nutricional a pacientes em hemodiálise.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Nutrição Esportiva -->
+    <section id="esportiva" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center mb-16">
+                <div class="w-full lg:w-1/2 reveal">
+                    <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Alta Performance</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-6">Nutrição Esportiva que dá Resultado</h2>
+                    <p class="text-stone-600 text-lg mb-4 leading-relaxed">
+                        A teoria é fundamental, mas a vivência debaixo da barra muda tudo. Eu treino <strong>musculação há mais de 20 anos</strong>, o que significa que já passei fisicamente por todas as etapas e obstáculos que você está enfrentando.
+                    </p>
+                    <p class="text-stone-600 text-lg leading-relaxed">
+                        Conheço na pele as fases de *bulking* (ganho), *cutting* (perda severa), a frustração dos platôs, a necessidade de energia em esportes de combate e a rotina exaustiva de treinos. Meu objetivo na área esportiva é alinhar a ciência da nutrição à sua realidade e esforço na academia, potencializando seu físico sem promessas irreais.
+                    </p>
+                </div>
+                
+                <!-- Grid de Cards Esportivos -->
+                <div class="w-full lg:w-1/2 grid sm:grid-cols-2 gap-6 reveal delay-100">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-surface p-6 rounded-3xl border border-stone-200 premium-shadow">
+                        <div class="w-12 h-12 bg-stone-900 text-white rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-900 text-lg mb-2">Periodização Nutricional</h3>
+                        <p class="text-sm text-stone-600">Ajuste dos macronutrientes alinhado aos seus blocos de treinamento. Garantimos a energia certa para a fase de volume ou o déficit preciso para definição, acompanhando o seu estímulo de treino.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-surface p-6 rounded-3xl border border-stone-200 premium-shadow">
+                        <div class="w-12 h-12 bg-brand-500 text-white rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-900 text-lg mb-2">Suplementação Inteligente</h3>
+                        <p class="text-sm text-stone-600">Sem desperdício de dinheiro. Prescrição de ergogênicos com alto nível de evidência científica (creatina, beta-alanina, whey) direcionados ao tipo de esporte e momento do seu treino.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-surface p-6 rounded-3xl border border-stone-200 premium-shadow">
+                        <div class="w-12 h-12 bg-brand-900 text-white rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-900 text-lg mb-2">Recomposição Corporal</h3>
+                        <p class="text-sm text-stone-600">A tão sonhada troca de gordura por massa magra. Ajustes milimétricos e particionamento de nutrientes para otimizar a sensibilidade à insulina e direcionar os macros aos músculos.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-surface p-6 rounded-3xl border border-stone-200 premium-shadow">
+                        <div class="w-12 h-12 bg-stone-200 text-stone-800 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="battery-charging" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-900 text-lg mb-2">Recuperação e Rendimento</h3>
+                        <p class="text-sm text-stone-600">Estratégias de pré, intra e pós-treino para reabastecer o glicogênio, minimizar dores tardias, evitar overtraining e deixar você 100% preparado para a próxima sessão de treino.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Método (Consultas Detalhadas) -->
     <section id="metodo" class="py-24 bg-surface border-y border-stone-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-                <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Abordagem Única</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">O Meu Método de Trabalho</h2>
-                <p class="text-stone-600 text-lg">Um processo estruturado, fugindo de dietas de gaveta. Foco total na sua aderência, rotina e evolução consistente.</p>
+                <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Rotina e Cuidado</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Como funciona a Consulta?</h2>
+                <p class="text-stone-600 text-lg">Um processo estruturado que envolve não apenas o paciente, mas toda a rede de apoio familiar e cuidadores.</p>
             </div>
 
-            <!-- 3 Pillars -->
-            <div class="grid md:grid-cols-3 gap-8 mb-20">
-                <div class="bg-white p-8 rounded-3xl premium-shadow reveal delay-100 border border-stone-100">
-                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6">
-                        <i data-lucide="scale" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-900 mb-3">Emagrecimento Sólido</h3>
-                    <p class="text-stone-600 leading-relaxed">
-                        Análise completa do seu metabolismo e preferências. Cada refeição é calculada para criar déficit calórico sem passar fome, garantindo resultados que se mantêm a longo prazo.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl premium-shadow reveal delay-200 border border-stone-100 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-50 rounded-bl-full -z-0"></div>
-                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 relative z-10">
-                        <i data-lucide="dumbbell" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-900 mb-3 relative z-10">Hipertrofia</h3>
-                    <p class="text-stone-600 leading-relaxed relative z-10">
-                        Estratégia nutricional precisa para potencializar seus treinos. Ofertamos os nutrientes certos no momento exato para maximizar a recuperação e o ganho de massa magra.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl premium-shadow reveal delay-300 border border-stone-100">
-                    <div class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6">
-                        <i data-lucide="activity" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-brand-900 mb-3">Longevidade e Clínica</h3>
-                    <p class="text-stone-600 leading-relaxed">
-                        Manejo especializado de condições como diabetes, hipertensão e alterações clínicas. Plano ajustado para promover saúde integrativa, controle de exames e disposição diária.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Passo a Passo -->
+            <!-- Passo a Passo Completo -->
             <div class="bg-white rounded-[2.5rem] p-8 md:p-12 premium-shadow max-w-5xl mx-auto border border-stone-100 reveal">
-                <h3 class="text-2xl md:text-3xl font-serif font-bold text-brand-900 mb-10 text-center">Como funciona o acompanhamento?</h3>
                 
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 relative">
                     <!-- Vertical Line Desktop -->
                     <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-stone-100 -translate-x-1/2"></div>
                     
                     <div class="flex gap-4 relative">
-                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20">1</div>
+                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20"><i data-lucide="clipboard-list" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="text-lg font-bold text-brand-900 mb-2">Pré-consulta Detalhada</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">Envio de um formulário completo para entender sua rotina, histórico de saúde, gostos e exames antes mesmo de nos falarmos. Isso otimiza nosso tempo.</p>
+                            <h4 class="text-lg font-bold text-brand-900 mb-2">1. Pré-consulta</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Envio de um <strong>questionário completo</strong> para avaliar antecipadamente a história clínica, consumo alimentar, histórico familiar e de medicamentos. Isso otimiza nosso tempo e permite um atendimento mais focado no seu problema real.</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4 relative">
-                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20">2</div>
+                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20"><i data-lucide="stethoscope" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="text-lg font-bold text-brand-900 mb-2">A Consulta (1 hora)</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">Alinhamento de metas. No presencial, realizamos a avaliação ISAK. No online, focamos em medidas referidas, sinais clínicos e comportamento.</p>
+                            <h4 class="text-lg font-bold text-brand-900 mb-2">2. A Avaliação Física e Exames</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Avaliação física detalhada (uso método ISAK em consultório ou aferições adaptadas em domicílio) e <strong>análise minuciosa de exames laboratoriais</strong>. Se necessário, realizo a solicitação de novos exames médicos.</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4 relative">
-                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20">3</div>
+                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20"><i data-lucide="apple" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="text-lg font-bold text-brand-900 mb-2">Plano Personalizado</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">Construo um plano que caiba no seu bolso e no seu relógio. Sem invenções difíceis de encontrar: comida de verdade calculada para você.</p>
+                            <h4 class="text-lg font-bold text-brand-900 mb-2">3. O Plano Alimentar Individual</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Entrega do plano alimentar estruturado de acordo com as necessidades individuais, enviado em <strong>até 4 dias úteis</strong> após a consulta. Inclui prescrição de suplementos vitamínicos, proteicos ou fórmulas enterais (quando necessário).</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4 relative">
-                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20">4</div>
+                        <div class="w-12 h-12 bg-brand-900 text-white rounded-full flex items-center justify-center font-bold text-lg shrink-0 z-10 shadow-lg shadow-brand-900/20"><i data-lucide="users" class="w-5 h-5"></i></div>
                         <div>
-                            <h4 class="text-lg font-bold text-brand-900 mb-2">Suporte via App</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">Sua dieta, lista de compras e evolução na palma da mão. Acesso direto a mim para tirar dúvidas durante todo o período do seu plano.</p>
+                            <h4 class="text-lg font-bold text-brand-900 mb-2">4. Apoio a Familiares e Cuidadores</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">Entrega de materiais complementares (receitas e adaptações de textura) e orientações nutricionais personalizadas <strong>focadas em familiares e cuidadores</strong>, garantindo adesão. Suporte ativo via WhatsApp em horário comercial.</p>
                         </div>
                     </div>
                 </div>
@@ -402,156 +572,81 @@
         </div>
     </section>
 
-    <!-- Nutrição na Prática (Visuals) -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Nutrição na Prática</h2>
-                <p class="text-stone-600 text-lg">A teoria aplicada à vida real para facilitar a sua jornada.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Card 1 -->
-                <div class="group reveal">
-                    <div class="rounded-[2rem] overflow-hidden mb-6 bg-surface p-4 border border-stone-100 premium-shadow">
-                        <img src="Prato prefeito.jpg" alt="O Prato Perfeito" class="w-full h-[300px] object-contain rounded-2xl mix-blend-multiply group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="text-center px-4">
-                        <h3 class="text-2xl font-bold font-serif text-brand-900 mb-3">O Prato Perfeito</h3>
-                        <p class="text-stone-600">O segredo não é passar fome, mas sim encontrar o equilíbrio exato de macro e micronutrientes para o seu objetivo.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="group reveal delay-100">
-                    <div class="rounded-[2rem] overflow-hidden mb-6 bg-surface p-4 border border-stone-100 premium-shadow">
-                        <img src="suplementação.jpg" alt="Suplementação" class="w-full h-[300px] object-cover rounded-2xl group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="text-center px-4">
-                        <h3 class="text-2xl font-bold font-serif text-brand-900 mb-3">Suplementação Estratégica</h3>
-                        <p class="text-stone-600">Suplemento não faz milagre sozinho, mas prescrito corretamente, otimiza performance, preenche lacunas e acelera resultados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Avaliação ISAK & Atendimento -->
+    <!-- Modalidades de Atendimento (Com Foco Domiciliar) -->
     <section id="atendimento" class="py-24 bg-brand-900 text-white relative overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             
-            <!-- Avaliação ISAK Feature -->
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-32 bg-brand-800/50 p-8 lg:p-12 rounded-[2.5rem] border border-brand-700/50 backdrop-blur-sm reveal">
-                <div class="w-full lg:w-1/2">
-                    <div class="inline-block bg-brand-700 text-brand-100 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 tracking-wide">
-                        DIFERENCIAL PRESENCIAL
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">Avaliação Física ISAK</h2>
-                    <p class="text-brand-100 mb-6 text-lg leading-relaxed">
-                        Sou certificado pelo método <a href="https://www.isak.global/" target="_blank" class="text-white underline decoration-brand-400 font-semibold hover:text-brand-300">ISAK Nível 1</a>, o padrão ouro mundial em antropometria. 
-                    </p>
-                    <p class="text-brand-100 mb-8 leading-relaxed">
-                        Esqueça balanças de bioimpedância simples. Com o método ISAK, mapeamos com precisão milimétrica a sua composição corporal (dobras cutâneas, perímetros e diâmetros ósseos), permitindo os ajustes mais finos possíveis na dieta.
-                    </p>
-                    
-                    <!-- Foto Vestimenta Integrada -->
-                    <div class="flex flex-col sm:flex-row gap-6 items-center bg-brand-900/50 p-5 rounded-2xl border border-brand-700/50">
-                        <img src="imagem avaliação fisica.jpg" onerror="this.onerror=null; this.src='imagem avaliação fisica.png';" alt="Vestimenta para Avaliação ISAK" class="w-full max-w-[280px] object-contain rounded-xl bg-white p-2 shrink-0 shadow-inner">
-                        <p class="text-sm text-brand-100 leading-relaxed">
-                            <i data-lucide="info" class="w-5 h-5 inline mb-1 text-brand-300"></i> Para a medição exata no consultório presencial, é recomendado o uso de roupas leves adequadas (como na imagem ao lado: top e short esportivo ou sunga/bermuda).
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2">
-                    <img src="foto isak.jpeg" alt="Leandro realizando avaliação ISAK" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-brand-700 object-cover">
-                </div>
-            </div>
-
-            <!-- Modalidades de Atendimento (A Seção que estava faltando!) -->
             <div class="text-center mb-12 reveal">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Modalidades de Atendimento</h2>
-                <p class="text-brand-200 text-lg">Formatos flexíveis para se ajustar perfeitamente à sua rotina.</p>
+                <p class="text-brand-200 text-lg">Formatos pensados para facilitar a sua vida ou o cuidado de quem você ama.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-24 max-w-6xl mx-auto">
+                
+                <!-- Online -->
                 <div class="bg-brand-800/40 border border-brand-700 p-8 rounded-3xl text-center reveal delay-100 hover:bg-brand-800/60 transition-colors flex flex-col h-full">
                     <div class="bg-brand-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white"><i data-lucide="video" class="w-8 h-8"></i></div>
                     <h3 class="font-bold text-xl mb-3 font-serif">Consulta Online</h3>
-                    <p class="text-sm text-brand-200 mb-8 flex-grow">Atendimento por vídeo, análise de exames e suporte total via app para qualquer lugar do mundo.</p>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20%C3%A9%20a%20Consulta%20Online." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-700 text-white font-semibold py-3 rounded-xl hover:bg-brand-600 transition shadow-lg mt-auto">Saber mais</a>
+                    <p class="text-sm text-brand-200 mb-8 flex-grow">Atendimento por vídeo, análise de exames e suporte total para qualquer região do Brasil ou mundo. Ideal para quem possui rotina corrida.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de agendar uma Consulta Online." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-700 text-white font-semibold py-3 rounded-xl hover:bg-brand-600 transition shadow-lg mt-auto">Saber mais</a>
                 </div>
                 
-                <div class="bg-white border border-brand-100 p-8 rounded-3xl text-center reveal delay-200 relative transform md:-translate-y-4 shadow-2xl flex flex-col h-full">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide whitespace-nowrap">Mais Buscado</span>
+                <!-- Presencial -->
+                <div class="bg-white border border-brand-100 p-8 rounded-3xl text-center reveal delay-200 shadow-2xl flex flex-col h-full">
                     <div class="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-600"><i data-lucide="building" class="w-8 h-8"></i></div>
-                    <h3 class="font-bold text-xl mb-3 font-serif text-brand-900">Presencial</h3>
-                    <p class="text-sm text-stone-600 mb-8 flex-grow">No consultório MedPlex (Porto Alegre), incluindo a avaliação física padrão ouro ISAK Nível 1.</p>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20%C3%A9%20a%20Consulta%20Avulsa." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-900 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-800 transition shadow-lg mt-auto">Saber mais</a>
+                    <h3 class="font-bold text-xl mb-3 font-serif text-brand-900">Consultório (Presencial)</h3>
+                    <p class="text-sm text-stone-600 mb-4 flex-grow">No consultório MedPlex Santana (Porto Alegre). Ambiente acessível, confortável e com realização da avaliação física padrão ouro ISAK.</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de agendar uma Consulta Presencial." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-900 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-800 transition shadow-lg mt-auto">Saber mais</a>
                 </div>
 
-                <div class="bg-brand-800/40 border border-brand-700 p-8 rounded-3xl text-center reveal delay-300 hover:bg-brand-800/60 transition-colors flex flex-col h-full">
-                    <div class="bg-brand-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white"><i data-lucide="home" class="w-8 h-8"></i></div>
-                    <h3 class="font-bold text-xl mb-3 font-serif">Domiciliar</h3>
-                    <p class="text-sm text-brand-200 mb-8 flex-grow">Comodidade total. Levo a estrutura de avaliação e consulta até a sua residência (em Porto Alegre).</p>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20%C3%A9%20a%20Consulta%20Domiciliar%20em%20Porto%20Alegre%2FRS" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-700 text-white font-semibold py-3 rounded-xl hover:bg-brand-600 transition shadow-lg mt-auto">Saber mais</a>
+                <!-- Domiciliar (Destaque para Idosos) -->
+                <div class="bg-brand-800/80 border-2 border-brand-400 p-8 rounded-3xl text-center reveal delay-300 relative transform md:-translate-y-4 shadow-2xl flex flex-col h-full">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-400 text-brand-950 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide whitespace-nowrap">Diferencial Idosos</span>
+                    <div class="bg-brand-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-brand-900"><i data-lucide="home" class="w-8 h-8"></i></div>
+                    <h3 class="font-bold text-xl mb-3 font-serif">Atendimento Domiciliar</h3>
+                    <p class="text-sm text-brand-100 mb-2 flex-grow text-left">Levo toda a estrutura clínica até a sua residência (somente em Porto Alegre/RS).</p>
+                    <p class="text-xs text-brand-200 mb-6 flex-grow text-left italic border-l-2 border-brand-400 pl-3">Especialmente recomendado para pessoas idosas acamadas, com dificuldade de locomoção e/ou em uso de terapia nutricional enteral (sondas).</p>
+                    <a href="https://wa.me/5551991333905?text=Olá! Gostaria de informações sobre o Atendimento Domiciliar para idosos em Porto Alegre." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-400 text-brand-950 font-bold py-3.5 rounded-xl hover:bg-brand-300 transition shadow-lg mt-auto">Consultar Regiões</a>
                 </div>
             </div>
 
             <!-- Planos -->
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Planos de Acompanhamento</h2>
-                <p class="text-brand-200 text-lg">Escolha o formato ideal para o seu compromisso com a saúde.</p>
-                <p class="text-sm text-brand-400 mt-2 font-medium">* Atendimento particular (não aceitamos convênios)</p>
+            <div class="text-center mb-16 reveal mt-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Acompanhamento e Planos</h2>
+                <p class="text-brand-200 text-lg">Formatos adequados para alta de paciente agudo ou monitoramento de doenças crônicas/esportes.</p>
+                <p class="text-sm text-brand-400 mt-2 font-medium">* Atendimento particular (não aceitamos convênios, mas emitimos recibo para reembolso).</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
                 <!-- Trimestral -->
                 <div class="bg-white text-stone-900 rounded-3xl p-8 reveal delay-100 flex flex-col h-full border-2 border-transparent hover:border-brand-300 transition-colors">
                     <div class="mb-8">
-                        <h3 class="font-bold text-2xl mb-2 font-serif">Plano Trimestral</h3>
-                        <p class="text-stone-500 text-sm">O início perfeito para construir disciplina e ver os primeiros resultados físicos.</p>
+                        <h3 class="font-bold text-2xl mb-2 font-serif">Acompanhamento Trimestral</h3>
+                        <p class="text-stone-500 text-sm">Ideal para tratamentos agudos, ganho rápido de massa ou recuperação nutricional.</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Avaliação e reavaliações incluídas</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Acesso ao aplicativo exclusivo</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Suporte tira-dúvidas via WhatsApp</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Consulta inicial + Reavaliações</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Entrega do plano em até 4 dias úteis</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Suporte tira-dúvidas contínuo</span></li>
                     </ul>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Trimestral" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-stone-100 text-stone-900 font-semibold py-3 rounded-xl hover:bg-stone-200 transition">Consultar Valor</a>
+                    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de saber mais sobre o Plano Trimestral" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-stone-100 text-stone-900 font-semibold py-3 rounded-xl hover:bg-stone-200 transition">Consultar Valor</a>
                 </div>
 
-                <!-- Semestral (Destaque) -->
-                <div class="bg-brand-50 text-stone-900 rounded-3xl p-8 reveal delay-200 flex flex-col h-full border-2 border-brand-500 relative transform md:-translate-y-4 shadow-2xl">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase">
-                        Mais Escolhido
-                    </div>
+                <!-- Semestral -->
+                <div class="bg-brand-50 text-stone-900 rounded-3xl p-8 reveal delay-200 flex flex-col h-full border-2 border-brand-500 relative">
                     <div class="mb-8 mt-2">
-                        <h3 class="font-bold text-2xl mb-2 font-serif text-brand-900">Plano Semestral</h3>
-                        <p class="text-stone-600 text-sm">O tempo ideal para uma transformação real na composição corporal e consolidação de hábitos.</p>
+                        <h3 class="font-bold text-2xl mb-2 font-serif text-brand-900">Acompanhamento Semestral</h3>
+                        <p class="text-stone-600 text-sm">O tempo ideal para controle e monitoramento de doenças crônicas, e recomposição corporal efetiva.</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm font-medium">Todas as vantagens do trimestral</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Planejamento de longo prazo</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Estratégias avançadas de periodização</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Monitoramento de exames a longo prazo</span></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Adaptações completas de cardápio e sonda</span></li>
                     </ul>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Semestral" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-900 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-800 transition shadow-lg">Consultar Valor</a>
-                </div>
-
-                <!-- Anual -->
-                <div class="bg-white text-stone-900 rounded-3xl p-8 reveal delay-300 flex flex-col h-full border-2 border-transparent hover:border-brand-300 transition-colors">
-                    <div class="mb-8">
-                        <h3 class="font-bold text-2xl mb-2 font-serif">Plano Anual</h3>
-                        <p class="text-stone-500 text-sm">Para quem busca alta performance, longevidade e acompanhamento contínuo da saúde clínica.</p>
-                    </div>
-                    <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Acompanhamento contínuo por 12 meses</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Ajustes para diferentes fases/estações</span></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-600 shrink-0"></i> <span class="text-sm">Maior custo-benefício</span></li>
-                    </ul>
-                    <a href="https://wa.me/5551991333905?text=Ol%C3%A1%21%20Estava%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Anual" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-stone-100 text-stone-900 font-semibold py-3 rounded-xl hover:bg-stone-200 transition">Consultar Valor</a>
+                    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de saber mais sobre o Plano Semestral" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="w-full block text-center bg-brand-900 text-white font-semibold py-3.5 rounded-xl hover:bg-brand-800 transition shadow-lg">Consultar Valor</a>
                 </div>
             </div>
 
@@ -564,10 +659,10 @@
             <div class="bg-white rounded-[2.5rem] premium-shadow overflow-hidden flex flex-col md:flex-row reveal border border-stone-100">
                 <!-- Info Div -->
                 <div class="w-full md:w-5/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-                    <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Consultório Físico</span>
-                    <h2 class="text-3xl font-serif font-bold text-brand-900 mb-6">Venha conversar comigo</h2>
+                    <span class="text-brand-600 font-semibold tracking-wider text-sm uppercase mb-3 block">Consultório Presencial</span>
+                    <h2 class="text-3xl font-serif font-bold text-brand-900 mb-6">Para quem prefere a Clínica</h2>
                     <p class="text-stone-600 mb-8 leading-relaxed">
-                        Meu consultório está localizado no <strong>MedPlex Santana</strong>, o mais moderno complexo de saúde do sul do país. Ambiente climatizado, privativo e com estacionamento no local.
+                        Meu consultório está localizado no <strong>MedPlex Santana</strong>, o mais moderno complexo de saúde do sul do país. Ambiente climatizado, privativo, com <strong>total acessibilidade</strong> para idosos e cadeirantes, e estacionamento no local.
                     </p>
                     
                     <div class="space-y-6 mb-10">
@@ -609,16 +704,16 @@
                     <img src="favicom-500x500.png" alt="Icone Branco" class="w-6 h-6 invert opacity-80">
                     <h2 class="text-stone-100 font-serif font-bold text-2xl">Leandro Alves</h2>
                 </div>
-                <p class="text-sm text-brand-500 font-medium mb-4">Nutricionista Clínico e Esportivo | CRN2 20221</p>
-                <p class="text-sm text-stone-500 max-w-sm mx-auto md:mx-0">Otimizando a composição corporal e a qualidade de vida com estratégias baseadas em ciência.</p>
+                <p class="text-sm text-brand-500 font-medium mb-4">Nutricionista Gerontologia, Clínico e Esportivo | CRN2 20221</p>
+                <p class="text-sm text-stone-500 max-w-sm mx-auto md:mx-0">Otimizando a composição corporal e a qualidade de vida do idoso e do adulto com ciência e empatia.</p>
             </div>
 
-            <!-- Botão do Instagram -->
             <div class="w-full md:w-1/3 flex flex-col items-center md:items-end">
                 <h3 class="text-stone-200 font-bold mb-4">Contato Direto</h3>
                 <div class="flex flex-col items-center md:items-end gap-4">
                     <a href="https://instagram.com/leandro.alves.nutri" target="_blank" class="hover:text-white transition flex items-center gap-3 text-sm group">
-                        <img src="icone instagram.jpg" alt="Ícone Instagram" class="w-8 h-8 rounded-lg shadow-md group-hover:scale-110 transition-transform object-cover">
+                        <img src="icone instagram.jpg" alt="Ícone Instagram" onerror="this.style.display='none'" class="w-8 h-8 rounded-lg shadow-md group-hover:scale-110 transition-transform object-cover">
+                        <i data-lucide="instagram" class="w-5 h-5 text-stone-500 group-hover:text-white" style="display:none" onload="if(!this.previousElementSibling.src) this.style.display='block'"></i>
                         @leandro.alves.nutri
                     </a>
                     <a href="mailto:nutrilealves@gmail.com" class="hover:text-white transition flex items-center gap-3 text-sm"><i data-lucide="mail" class="w-5 h-5 text-stone-500"></i> nutrilealves@gmail.com</a>
@@ -628,7 +723,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-stone-800 text-center">
-            <p class="text-xs text-stone-500 mb-2">© 2026 Leandro Alves Nutricionista. Todos os direitos reservados. Porto Alegre, RS.</p>
+            <p class="text-xs text-stone-500 mb-2">© 2024 Leandro Alves Nutricionista. Todos os direitos reservados. Porto Alegre, RS.</p>
             <p class="text-[10px] text-stone-600 leading-relaxed max-w-3xl mx-auto">
                 Conteúdo informativo em conformidade com o <strong>Código de Ética do Nutricionista (Resolução CFN nº 599/2018)</strong>. 
                 As informações publicadas não substituem a consulta nutricional individualizada.
@@ -657,7 +752,6 @@
         if(btn && menu) {
             btn.onclick = () => {
                 menu.classList.toggle('hidden');
-                // Altera o ícone
                 const icon = btn.querySelector('i');
                 if (menu.classList.contains('hidden')) {
                     icon.setAttribute('data-lucide', 'menu');
@@ -667,10 +761,8 @@
                 lucide.createIcons();
             };
             
-            // Fechar menu ao clicar em um link
             menu.querySelectorAll('a').forEach(link => {
                 link.onclick = (e) => {
-                    // Adicionado timeout para permitir que a rolagem inicie antes do menu sumir
                     setTimeout(() => {
                         menu.classList.add('hidden');
                         btn.querySelector('i').setAttribute('data-lucide', 'menu');
@@ -695,8 +787,8 @@
         const revealElements = document.querySelectorAll('.reveal');
         
         const revealOptions = {
-            threshold: 0.15, // Porcentagem do elemento visível para ativar
-            rootMargin: "0px 0px -50px 0px" // Dispara um pouco antes de aparecer totalmente
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
         };
 
         const revealOnScroll = new IntersectionObserver(function(entries) {
@@ -704,13 +796,43 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 } else {
-                    entry.target.classList.remove('active'); // Remove a classe ao sair do ecrã para animar de novo
+                    entry.target.classList.remove('active'); 
                 }
             });
         }, revealOptions);
 
         revealElements.forEach(el => {
             revealOnScroll.observe(el);
+        });
+
+        // Accordion Logic (Especialidades)
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.flex.justify-between');
+            const content = item.querySelector('.accordion-content');
+            
+            header.addEventListener('click', () => {
+                // Fecha todos os outros antes de abrir o atual (Opcional - deixe comentado se quiser múltiplos abertos)
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        otherItem.querySelector('.accordion-content').style.paddingBottom = "0px";
+                    }
+                });
+
+                // Alterna o atual
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    // Calcula a altura real do conteúdo para animar suavemente
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.paddingBottom = "16px";
+                } else {
+                    content.style.maxHeight = null;
+                    content.style.paddingBottom = "0px";
+                }
+            });
         });
     </script>
 
