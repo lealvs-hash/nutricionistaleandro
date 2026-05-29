@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Otimizado para suportar Google Ads e Google Analytics (GA4) simultaneamente -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17752409667"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      // Configuração atual do Google Ads
       gtag('config', 'AW-17752409667');
+      
+      // DICA DE INDEXAÇÃO E RASTREAMENTO: 
+      // Se você quiser ativar o Google Analytics 4 (GA4), basta descomentar a linha abaixo substituindo o código 'G-XXXXXXXXXX' pelo seu código do Analytics:
+      // gtag('config', 'G-XXXXXXXXXX');
     </script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- GOOGLE SEARCH CONSOLE - Verificação de propriedade e indexação -->
     <meta name="google-site-verification" content="R6gew60n-p6zuITA9xfrGHIHJDrO8-D67CFFHKVVDqg" />
     
-    <!-- SEO Aprimorado: Novas Palavras-Chave e Descrição -->
-    <meta name="description" content="Nutricionista em Porto Alegre para adultos e idosos. Atendimento na Clínica (MedPlex), Domiciliar (Home Care) e Online. Especialista em Reeducação Alimentar, Emagrecimento, Nutrição Esportiva e Geriatria." />
-    <meta name="keywords" content="Nutricionista em Porto Alegre, nutricionista online, nutricionista na clínica, nutricionista domiciliar, nutricionista home care, nutricionista esportivo, nutricionista para idosos, geriatria, reeducação alimentar, emagrecimento saudável, dieta sem restrição, hipertrofia, MedPlex Santana, sarcopenia, nutrição para adultos." />
+    <!-- SEO Aprimorado: Foco em Porto Alegre, Geriatria, Emagrecimento, Performance e Avaliação Física ISAK -->
+    <meta name="description" content="Nutricionista em Porto Alegre para adultos e idosos. Atendimento na Clínica (MedPlex Santana), Domiciliar (Home Care) e Online. Especialista em Reeducação Alimentar, Emagrecimento, Nutrição Esportiva, Avaliação Física ISAK e Geriatria." />
+    <meta name="keywords" content="Nutricionista em Porto Alegre, nutricionista online, nutricionista na clínica, nutricionista domiciliar, nutricionista home care, nutricionista esportivo, nutricionista para idosos, geriatria, reeducação alimentar, emagrecimento saudável, avaliação física isak, antropometria porto alegre, adipometro, hipertrofia, MedPlex Santana, sarcopenia, nutrição para adultos." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
-    <!-- CORREÇÃO DE INDEXAÇÃO E SEO: URL com WWW -->
+    <!-- CORREÇÃO DE INDEXAÇÃO E SEO: URL com WWW para evitar conteúdo duplicado no Google -->
     <link rel="canonical" href="https://www.nutricionistaleandro.com.br/" />
     
     <!-- FAVICON -->
@@ -26,16 +34,18 @@
     <link rel="shortcut icon" href="favicom-500x500.png" type="image/png" />
     <link rel="apple-touch-icon" href="favicom-500x500.png" />
     
-    <!-- Metadados de Imagem (Open Graph) -->
+    <!-- Metadados de Imagem (Open Graph para Redes Sociais e Compartilhamento de Links) -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.nutricionistaleandro.com.br/" />
-    <meta property="og:title" content="Leandro Alves | Nutrição Clínica, Esportiva e Gerontologia" />
-    <meta property="og:description" content="Especialista em Saúde do Idoso, Clínica e Esportiva. Atendimento presencial, online e domiciliar (home care) em Porto Alegre." />
+    <meta property="og:title" content="Leandro Alves | Nutricionista Clínico, Esportivo e Saúde do Idoso em Porto Alegre" />
+    <meta property="og:description" content="Especialista em Saúde do Idoso, Clínica, Esportiva e Avaliação Física ISAK. Atendimento no MedPlex Santana, Online e Domiciliar." />
     <meta property="og:image" content="https://www.nutricionistaleandro.com.br/favicom-500x500.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
     
-    <title>Leandro Alves | Nutricionista Clínico, Esportivo e Saúde do Idoso | Porto Alegre</title>
+    <title>Leandro Alves | Nutricionista Clínico, Esportivo, Avaliação Física ISAK e Saúde do Idoso | Porto Alegre</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,6 +132,51 @@
             transform: rotate(180deg);
         }
     </style>
+
+    <!-- SCHEMA MARKUP (JSON-LD): Essencial para SEO Local no Google (Google Meu Negócio / Busca Orgânica) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Leandro Alves | Nutricionista Clínico, Esportivo e Saúde do Idoso",
+      "image": "https://www.nutricionistaleandro.com.br/favicom-500x500.png",
+      "@id": "https://www.nutricionistaleandro.com.br/#medicalbusiness",
+      "url": "https://www.nutricionistaleandro.com.br/",
+      "telephone": "+55-51-99133-3905",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Gomes Jardim, 301 - Sala 601, Torre Sul, Santana",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "postalCode": "90620-130",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.046985,
+        "longitude": -51.211516
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://instagram.com/leandro.alves.nutri",
+        "https://www.linkedin.com/in/leandronutricionista"
+      ],
+      "medicalSpecialty": "DietNutrition",
+      "description": "Nutricionista em Porto Alegre especialista em Nutrição Clínica, Nutrição Esportiva, Avaliação Física ISAK e Saúde do Idoso (Geriatria). Atendimento presencial no MedPlex Santana, online e domiciliar."
+    }
+    </script>
 </head>
 <body class="antialiased font-sans overflow-x-hidden">
 
@@ -129,8 +184,8 @@
     <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="favicom-500x500.png" alt="Icone Logo" class="w-10 h-10 md:w-11 md:h-11 group-hover:rotate-12 transition-transform duration-300 shrink-0">
+            <a href="#" class="flex items-center gap-3 group" title="Voltar ao início">
+                <img src="favicom-500x500.png" alt="Logotipo Leandro Alves Nutricionista Porto Alegre" class="w-10 h-10 md:w-11 md:h-11 group-hover:rotate-12 transition-transform duration-300 shrink-0">
                 <div class="flex flex-col justify-center">
                     <span class="font-serif font-bold text-lg md:text-xl text-brand-900 tracking-wide leading-none mb-1">Leandro Alves</span>
                     <span class="text-[11px] md:text-xs text-stone-600 font-medium leading-none mb-0.5">Nutrição Clínica, Esportiva e Geriatria</span>
@@ -138,33 +193,37 @@
                 </div>
             </a>
             
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 items-center">
+            <!-- Desktop Menu (Ajustado com todas as especialidades e Avaliação Física) -->
+            <div class="hidden lg:flex space-x-6 xl:space-x-8 items-center">
                 <a href="#sobre" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Sobre mim</a>
                 <a href="#especialidades" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Geriatria</a>
                 <a href="#emagrecimento" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Emagrecimento</a>
                 <a href="#esportiva" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Esportiva</a>
+                <a href="#avaliacao-fisica" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Avaliação Física</a>
                 <a href="#atendimento" class="text-sm font-medium text-stone-600 hover:text-brand-700 transition-colors">Modalidades</a>
-                <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-800 transition-all shadow-lg shadow-brand-900/20 flex items-center gap-2">
+                
+                <a href="https://wa.me/5551991333905?text=Olá! Gostaria de agendar uma consulta" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-brand-800 transition-all shadow-lg shadow-brand-900/20 flex items-center gap-2">
                     Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-brand-900 focus:outline-none">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-900 focus:outline-none" aria-label="Abrir menu de navegação">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-stone-100 absolute w-full left-0 shadow-2xl h-screen overflow-y-auto pb-24 top-[70px]">
+        <!-- Mobile Menu (Menu Ajustado) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-lg border-t border-stone-100 absolute w-full left-0 shadow-2xl h-screen overflow-y-auto pb-24 top-[70px]">
             <div class="flex flex-col px-6 py-4 space-y-2">
-                <a href="#sobre" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Sobre mim</a>
-                <a href="#especialidades" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Saúde do Idoso (Geriatria)</a>
-                <a href="#emagrecimento" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Reeducação Alimentar</a>
-                <a href="#esportiva" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Nutrição Esportiva</a>
-                <a href="#atendimento" class="text-stone-700 font-medium py-4 border-b border-stone-100 block w-full text-lg">Modalidades e Planos</a>
-                <a href="https://wa.me/5551991333905" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-4 py-4 rounded-xl text-center font-medium mt-6 block w-full shadow-lg text-lg flex items-center justify-center gap-2">
+                <a href="#sobre" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Sobre mim</a>
+                <a href="#especialidades" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Saúde do Idoso (Geriatria)</a>
+                <a href="#emagrecimento" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Reeducação & Emagrecimento</a>
+                <a href="#esportiva" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Nutrição Esportiva</a>
+                <a href="#avaliacao-fisica" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Avaliação Física ISAK</a>
+                <a href="#atendimento" class="text-stone-700 font-medium py-3 border-b border-stone-100 block w-full text-lg">Modalidades e Planos</a>
+                
+                <a href="https://wa.me/5551991333905" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="bg-brand-900 text-white px-4 py-3.5 rounded-xl text-center font-medium mt-6 block w-full shadow-lg text-lg flex items-center justify-center gap-2">
                     <i data-lucide="message-circle" class="w-5 h-5"></i> Agendar no WhatsApp
                 </a>
             </div>
@@ -189,7 +248,7 @@
                 </h1>
                 
                 <p class="text-lg text-stone-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Especialista no acompanhamento de <strong>adultos e idosos (geriatria)</strong>. Seja para reeducação alimentar e perda de peso, otimizar treinos esportivos, recuperar a saúde ou garantir um envelhecimento com qualidade de vida.
+                    Especialista no acompanhamento de <strong>adultos e idosos (geriatria)</strong>. Seja para reeducação alimentar e perda de peso, otimizar treinos esportivos, recuperar a saúde ou garantir um envelhecimento com qualidade de vida através de métodos consolidados.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -214,7 +273,7 @@
             <!-- Hero Image -->
             <div class="w-full lg:w-1/2 relative reveal delay-200">
                 <div class="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0">
-                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Nutricionista Leandro Alves atuando" class="w-full h-auto rounded-3xl shadow-2xl relative z-10 border-8 border-white object-cover object-top" />
+                    <img src="WhatsApp Image 2025-11-12 at 17.29.13.jpeg" alt="Nutricionista Leandro Alves em seu consultório em Porto Alegre realizando orientação" class="w-full h-auto rounded-3xl shadow-2xl relative z-10 border-8 border-white object-cover object-top" />
                     <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-900 rounded-3xl -z-0"></div>
                 </div>
             </div>
@@ -252,7 +311,7 @@
                 <!-- Image Side -->
                 <div class="w-full lg:w-5/12 reveal">
                     <div class="relative">
-                        <img src="foto leandroo.jpeg" alt="Leandro Alves no Consultório" class="w-full h-auto rounded-3xl premium-shadow z-10 relative object-cover">
+                        <img src="foto leandroo.jpeg" alt="Nutricionista Leandro Alves realizando atendimento nutricional personalizado em Porto Alegre" class="w-full h-auto rounded-3xl premium-shadow z-10 relative object-cover">
                         <div class="absolute -top-4 -right-4 w-full h-full border-2 border-brand-200 rounded-3xl -z-10"></div>
                     </div>
                 </div>
@@ -461,7 +520,7 @@
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: Reeducação Alimentar e Emagrecimento -->
+    <!-- Reeducação Alimentar e Emagrecimento -->
     <section id="emagrecimento" class="py-24 bg-surface border-y border-stone-200 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
@@ -633,8 +692,8 @@
         </div>
     </section>
 
-    <!-- Avaliação Física ISAK -->
-    <section class="py-20 bg-white border-b border-stone-200">
+    <!-- Avaliação Física ISAK (Seção com ID integrada ao menu e otimizada para SEO) -->
+    <section id="avaliacao-fisica" class="py-20 bg-white border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <!-- Texto -->
@@ -646,7 +705,7 @@
                         Utilizo o método <strong>ISAK</strong> <span class="text-sm">(International Society for the Advancement of Kinanthropometry)</span>, que é a referência mundial em antropometria clínica.
                     </p>
                     <p class="text-stone-600 text-lg mb-8 leading-relaxed">
-                        Através de medidas precisas milimétricas utilizando <strong>Adipômetro (dobras), Fita Métrica e Paquímetro</strong>, monitoramos a evolução exata da sua gordura corporal, ossos e massa muscular. Evite as imprecisões!
+                        Através de medidas precisas milimétricas utilizando <strong>Adipômetro (dobras cutâneas), Fita Métrica e Paquímetro</strong>, monitoramos a evolução exata da sua gordura corporal, ossos e massa muscular. Evite as imprecisões e tenha resultados reais!
                     </p>
 
                     <!-- Dica de Vestimenta -->
@@ -665,10 +724,10 @@
                     </div>
                 </div>
 
-                <!-- Imagens -->
+                <!-- Imagens com Tags ALT Estratégicas para SEO Google Imagens -->
                 <div class="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4 reveal delay-100">
-                    <img src="foto isak.jpeg" alt="Nutricionista Leandro Alves realizando avaliação física com adipômetro" class="w-full sm:w-1/2 h-72 sm:h-[400px] object-cover rounded-3xl premium-shadow border-4 border-white">
-                    <img src="imagem avaliação fisica.jpg" alt="Ilustração da vestimenta recomendada para a avaliação física" class="w-full sm:w-1/2 h-72 sm:h-[400px] object-contain bg-stone-50 rounded-3xl premium-shadow border-4 border-white p-4">
+                    <img src="foto isak.jpeg" alt="Nutricionista Leandro Alves realizando avaliação física com adipômetro de alta precisão em Porto Alegre" class="w-full sm:w-1/2 h-72 sm:h-[400px] object-cover rounded-3xl premium-shadow border-4 border-white">
+                    <img src="imagem avaliação fisica.jpg" alt="Ilustração da vestimenta recomendada para a avaliação física ISAK e acompanhamento nutricional" class="w-full sm:w-1/2 h-72 sm:h-[400px] object-contain bg-stone-50 rounded-3xl premium-shadow border-4 border-white p-4">
                 </div>
             </div>
         </div>
@@ -812,7 +871,7 @@
                 </div>
                 
                 <!-- Map Div -->
-                <a href="https://share.google/xwffVK3txH9Hhf1m1" target="_blank" class="w-full md:w-7/12 h-[400px] md:h-auto min-h-[400px] relative block group overflow-hidden rounded-[2rem] premium-shadow">
+                <a href="https://share.google/xwffVK3txH9Hhf1m1" target="_blank" class="w-full md:w-7/12 h-[400px] md:h-auto min-h-[400px] relative block group overflow-hidden rounded-[2rem] premium-shadow" title="Mapa de localização MedPlex Santana">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.647565154336!2d-51.211516624446454!3d-30.0469851749221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978438be0d853%3A0x7d0a7a020165c71b!2sRua%20Gomes%20Jardim%2C%20301%20-%20Santana%2C%20Porto%20Alegre%20-%20RS%2C%2090620-130!5e0!3m2!1spt-BR!2sbr!4v1708700000000!5m2!1spt-BR!2sbr" class="absolute inset-0 w-full h-full border-0 pointer-events-none" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="absolute inset-0 bg-brand-900/0 group-hover:bg-brand-900/20 transition-all duration-300 flex items-center justify-center backdrop-blur-[0px] group-hover:backdrop-blur-[2px]">
                          <span class="bg-white text-brand-900 px-6 py-3 rounded-full font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
@@ -824,7 +883,7 @@
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: Chamada para o Instagram -->
+    <!-- Chamada para o Instagram -->
     <section class="py-16 bg-gradient-to-br from-brand-900 to-brand-800 relative overflow-hidden">
         <!-- Efeito visual no fundo -->
         <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full mix-blend-overlay filter blur-[80px] -translate-y-1/2"></div>
@@ -837,7 +896,7 @@
             
             <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Acompanhe dicas diárias no Instagram!</h2>
             <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-                Posto conteúdos sobre longevidade, nutrição esportiva, saúde do idoso e desmistificação de dietas para você aplicar direto na sua rotina.
+                Posto conteúdos sobre longevidade, nutrição esportiva, saúde do idoso, avaliação física e desmistificação de dietas para você aplicar direto na sua rotina.
             </p>
             
             <a href="https://instagram.com/leandro.alves.nutri" target="_blank" class="inline-flex items-center gap-3 bg-white text-brand-900 px-8 py-4 rounded-xl font-bold hover:bg-brand-50 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300">
@@ -853,11 +912,11 @@
             
             <div class="w-full md:w-1/3">
                 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-                    <img src="favicom-500x500.png" alt="Icone Branco" class="w-6 h-6 invert opacity-80">
+                    <img src="favicom-500x500.png" alt="Logotipo Leandro Alves Nutrição" class="w-6 h-6 invert opacity-80">
                     <h2 class="text-stone-100 font-serif font-bold text-2xl">Leandro Alves</h2>
                 </div>
                 <p class="text-sm text-brand-500 font-medium mb-4">Nutricionista Clínico, Esportivo e Geriatria | CRN2 20221</p>
-                <p class="text-sm text-stone-500 max-w-sm mx-auto md:mx-0">Otimizando a composição corporal e a qualidade de vida do idoso e do adulto com ciência e empatia.</p>
+                <p class="text-sm text-stone-500 max-w-sm mx-auto md:mx-0">Otimizando a composição corporal e a qualidade de vida do idoso e do adulto com ciência, avaliação física precisa e empatia.</p>
             </div>
 
             <div class="w-full md:w-1/3 flex flex-col items-center md:items-end">
@@ -887,7 +946,7 @@
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de agendar uma consulta." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd57] hover:scale-110 transition-all z-50 group flex items-center justify-center">
+    <a href="https://wa.me/5551991333905?text=Olá! Estava no seu site e gostaria de agendar uma consulta." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-17752409667/oZQZCOrzm5UcEMOMgZfC'});" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1ebd57] hover:scale-110 transition-all z-50 group flex items-center justify-center" aria-label="Falar pelo WhatsApp">
         <i data-lucide="message-circle" class="w-7 h-7"></i>
         <span class="absolute right-full mr-4 bg-white text-stone-800 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap hidden md:block border border-stone-100">
             Fale comigo no WhatsApp
@@ -968,7 +1027,7 @@
             const content = item.querySelector('.accordion-content');
             
             header.addEventListener('click', () => {
-                // Fecha todos os outros antes de abrir o atual (Opcional - deixe comentado se quiser múltiplos abertos)
+                // Fecha todos os outros antes de abrir o atual
                 accordionItems.forEach(otherItem => {
                     if (otherItem !== item && otherItem.classList.contains('active')) {
                         otherItem.classList.remove('active');
@@ -980,7 +1039,6 @@
                 // Alterna o atual
                 item.classList.toggle('active');
                 if (item.classList.contains('active')) {
-                    // Calcula a altura real do conteúdo para animar suavemente
                     content.style.maxHeight = content.scrollHeight + "px";
                     content.style.paddingBottom = "16px";
                 } else {
