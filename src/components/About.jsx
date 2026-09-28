@@ -13,6 +13,11 @@ import {
 export default function About({ onOpenBooking }) {
   const credentials = [
     {
+      title: "Nutricionista Clínico e Hospitalar",
+      desc: "Experiência hospitalar no cuidado a pacientes em UTI, pós-operatório e diferentes graus de internação e complexidade.",
+      badge: "Hospitalar"
+    },
+    {
       title: "Programa PICCAP - HCPA",
       desc: "Atenção à Saúde do Adulto e Idoso no Hospital de Clínicas de Porto Alegre.",
       badge: "Hospitalar"
@@ -101,7 +106,7 @@ export default function About({ onOpenBooking }) {
               </p>
 
               <p>
-                No âmbito clínico de alta complexidade, atuei no programa <strong>PICCAP (Atenção à Saúde do Adulto e Idoso) no Hospital de Clínicas de Porto Alegre (HCPA)</strong>, conduzindo a recuperação nutricional de pacientes graves, reabilitação geriátrica, prevenção de sarcopenia e suporte a doenças crônicas, com ampla atuação em hospitais, clínicas e ILPIs (Instituições de Longa Permanência para Idosos).
+                No âmbito clínico e hospitalar, possuo sólida experiência atuando em hospitais de Porto Alegre no cuidado direto a pacientes internados em <strong>UTI, pós-operatório e diferentes graus de complexidade e internação</strong>, além de passagem pelo programa <strong>PICCAP (Atenção à Saúde do Adulto e Idoso) no Hospital de Clínicas de Porto Alegre (HCPA)</strong>, conduzindo a recuperação nutricional de quadros graves, reabilitação geriátrica, prevenção de sarcopenia e suporte a doenças crônicas em hospitais, clínicas e ILPIs (Instituições de Longa Permanência para Idosos).
               </p>
 
               <p>
@@ -111,10 +116,15 @@ export default function About({ onOpenBooking }) {
 
             {/* Academic Credentials Box */}
             <div className="bg-surface rounded-2xl p-6 sm:p-7 border border-stone-200/90 shadow-sm">
-              <h3 className="text-lg font-serif font-bold text-brand-950 mb-4 flex items-center gap-2">
-                <GraduationCap className="w-5 h-5 text-brand-700" />
-                Formação Acadêmica & Certificações
-              </h3>
+              <div className="mb-4">
+                <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/90 px-3 py-1 rounded-full mb-2 border border-emerald-200">
+                  Nutricionista Clínico e Hospitalar
+                </span>
+                <h3 className="text-lg font-serif font-bold text-brand-950 flex items-center gap-2">
+                  <GraduationCap className="w-5 h-5 text-brand-700" />
+                  Formação Acadêmica & Certificações
+                </h3>
+              </div>
 
               <div className="space-y-3.5">
                 {credentials.map((cred, idx) => (

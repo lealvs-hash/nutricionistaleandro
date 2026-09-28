@@ -104,7 +104,7 @@ export default function Navbar({ onOpenBooking }) {
                 </span>
               </div>
               <span className="text-[11px] md:text-xs text-stone-500 font-medium mt-0.5">
-                Clínica • Geriatria • Esportiva • ISAK
+                Clínica • Hospitalar • Geriatria • Esportiva • ISAK
               </span>
             </div>
           </a>

@@ -94,7 +94,7 @@ export default function GeriatricsSection({ onOpenBooking }) {
           </h2>
           
           <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
-            Com vasta vivência no <strong>Hospital de Clínicas de Porto Alegre (PICCAP)</strong> e em instituições de longa permanência, proporciono um olhar técnico e humano para a saúde, o bem-estar e a longevidade dos pacientes idosos.
+            Com sólida <strong>experiência hospitalar</strong> atuando em hospitais de Porto Alegre no cuidado a pacientes internados em UTI, pós-operatório e diferentes graus de complexidade e internação — além de atuação no <strong>Hospital de Clínicas de Porto Alegre (PICCAP)</strong> e em instituições de longa permanência —, proporciono um olhar técnico e humano para a recuperação clínica, a saúde e a longevidade dos pacientes.
           </p>
 
           <div className="mt-4 inline-flex items-center gap-2 text-brand-800 text-xs sm:text-sm font-semibold bg-white/80 px-4 py-1.5 rounded-full border border-brand-200 shadow-sm">

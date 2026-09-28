@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-brand-400 font-semibold tracking-wide">
-              Nutricionista Clínico, Esportivo & Geriatria • CRN2 20221
+              Nutricionista Clínico, Hospitalar, Esportivo & Geriatria • CRN2 20221
             </p>
 
             <p className="text-xs text-stone-400 leading-relaxed">
